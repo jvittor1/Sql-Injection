@@ -1,0 +1,13 @@
+<div>
+    <form class="flex-column" [formGroup]="createUserForm">
+        <h2>Create User</h2>
+        <app-input formControlName="login" inputName="loginForm" label="Login" type="text" placeHolder="Digite seu login" ></app-input>
+        <app-input formControlName="name" inputName="name" label="Name" type="text" placeHolder="Digite seu nome" ></app-input>
+        <app-input formControlName="email" inputName="email" label="Email" type="email" placeHolder="Digite seu email" ></app-input>
+        <app-input formControlName="password" inputName="password" label="Password" type="password" placeHolder="Digite sua senha" ></app-input>
+    
+        <button [disabled]="createUserForm.invalid" (click)="handleCreateUserSubmit()">Create</button>
+        <button (click)="navigateToLogin()" class="login">Login</button>
+    </form>
+    
+</div>

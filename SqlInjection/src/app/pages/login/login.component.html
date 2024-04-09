@@ -1,0 +1,20 @@
+<div class="flex">
+    <form class="flex-column" [formGroup]="sqlInjectionForm">
+        <h2>Sql Injection</h2>
+        <app-input formControlName="login" inputName="loginForm" label="Login" type="text" placeHolder="Digite seu login" ></app-input>
+        <app-input formControlName="password" inputName="password" label="Password" type="password" placeHolder="Digite sua senha" ></app-input>
+    
+        <button [disabled]="sqlInjectionForm.invalid" (click)="handleSqlInjectionFormSubmit()">Login</button>
+        <button (click)="navigateCreateUser()" class="signUp">Sign Up</button>
+    </form>
+    
+    
+    <form class="flex-column" [formGroup]="noSqlInjectionForm">
+        <h2>No Sql Injection</h2>
+        <app-input formControlName="login" inputName="loginForm" label="Login" type="text" placeHolder="Digite seu login" ></app-input>
+        <app-input formControlName="password" inputName="password" label="Password" type="password" placeHolder="Digite sua senha" ></app-input>
+    
+        <button [disabled]="noSqlInjectionForm.invalid" (click)="handleNoSqlInjectionFormSubmit()">Login</button>
+        <button (click)="navigateCreateUser()" class="signUp">Sign Up</button>
+    </form>    
+</div>
