@@ -1,0 +1,19 @@
+<div class="dialogContainer flex-column">    
+    <h2 mat-dialog-title>User</h2>
+    <mat-dialog-content class="mat-typography dialogContent flex-column">
+
+        <div class="userInfo flex-column" *ngFor="let user of injectedData">
+            <span>ID: {{user.id}}</span>
+            <span>Name: {{user.name}}</span>
+            <span>Email: {{user.email}}</span>
+            <span>Login: {{user.login}}</span>
+            <span>Password: {{user.password}}</span>
+        </div>
+
+
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Close</button>
+    </mat-dialog-actions>
+
+</div>
